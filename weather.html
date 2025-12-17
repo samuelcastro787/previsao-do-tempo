@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="weather.css">
+    <title>Previsão do Tempo</title>
+</head>
+
+<body>
+    <!-- Container principal que centraliza todo o conteúdo -->
+    <div class="container">
+
+        <!-- Área de pesquisa da cidade -->
+        <div class="pesquisa">
+            <!-- Ícone de localização -->
+            <i class="fa-solid fa-location-dot"></i>
+
+            <!-- Campo de texto onde o usuário digita a cidade -->
+            <input type="text" id="caixa" placeholder="Digite uma Cidade">
+
+            <!-- Botão de busca que chama a função buscar() no JavaScript -->
+            <button type="submit" onclick="buscar()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <!-- Bloco que exibe as informações do clima -->
+        <!-- Ele começa oculto e só aparece após uma busca válida -->
+        <div class="weather">
+
+            <!-- Nome da cidade e país -->
+            <h1 id="city"></h1>
+
+            <div id="infos">
+                <!-- Temperatura atual e descrição do clima -->
+                <div id="temp">
+                    <!-- Ícone do clima vindo da API OpenWeather -->
+                    <img id="temp_icon" src="https://openweathermap.org/img/wn/10d@2x.png" alt="Ícone do clima">
+
+                    <div>
+                        <!-- Temperatura atual -->
+                        <p id="temp_value"></p>
+
+                        <!-- Descrição do clima (ex: céu limpo, nublado) -->
+                        <p id="temp_description"></p>
+                    </div>
+                </div>
+
+                <!-- Informações adicionais -->
+                <div id="other_infos">
+
+                    <!-- Temperatura máxima -->
+                    <div class="info">
+                        <i id="temp_icon_max" class="fa-solid fa-temperature-arrow-up"></i>
+                        <div>
+                            <h2>Temp. máx</h2>
+                            <p id="temp_max"></p>
+                        </div>
+                    </div>
+
+                    <!-- Temperatura mínima -->
+                    <div class="info">
+                        <i id="temp_icon_min"class="fa-solid fa-temperature-arrow-down"></i>
+                        <div>
+                            <h2>Temp. mín</h2>
+                            <p id="temp_min"></p>
+                        </div>
+                    </div>
+
+                    <!-- Umidade do ar -->
+                    <div class="info">
+                        <i id="temp_icon_umidade" class="fa-solid fa-droplet"></i>
+                        <div>
+                            <h2>Umidade</h2>
+                            <p id="temp_umidade"></p>
+                        </div>
+                    </div>
+
+                    <!-- Velocidade do vento -->
+                    <div class="info">
+                        <i id="temp_icon_vento" class="fa-solid fa-wind"></i>
+                        <div>
+                            <h2>Vento</h2>
+                            <p id="temp_vento"></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Área para exibição de mensagens de erro ou alerta -->
+        <div id="alert"></div>
+
+    </div>
+
+    <!-- Arquivo JavaScript responsável pela lógica da aplicação -->
+    <!-- Ele faz a requisição à API, valida a cidade e atualiza a interface -->
+    <script src="weather.js"></script>
+</body>
+</html>

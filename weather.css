@@ -1,0 +1,160 @@
+/* Importação de fontes do Google Fonts */
+/* Poppins é usada como fonte principal do projeto */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variáveis globais de cores */
+:root {
+    --color1: rgb(87, 131, 250); /* Cor principal do fundo */
+}
+
+/* Reset de estilos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo geral da página */
+body {
+    background-color: var(--color1);
+    color: black;
+
+    /* Centraliza o conteúdo na tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 5px;
+}
+
+/* Container principal da aplicação */
+.container {
+    background-color: white; 
+    border-radius: 20px; 
+    padding: 18px; 
+}
+
+/* Área de pesquisa (input + botão) */
+.pesquisa {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 4px 12px;
+}
+
+/* Botão da lupa */
+.pesquisa button {
+    border: none; 
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Campo de texto */
+.pesquisa input {
+    border: none; 
+    background-color: transparent;
+    font-size: 16px;
+    width: 100%; 
+}
+
+/* Remove contorno ao focar no input */
+.pesquisa input:focus-visible {
+    outline: none;
+}
+
+/* Bloco principal das informações do clima */
+.weather {
+    margin-top: 20px;
+    display: none; 
+}
+
+/* Nome da cidade */
+.weather #city {
+    margin-bottom: 5px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Bloco da temperatura atual */
+#temp {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    background: linear-gradient(90deg, #5a7cdc, #606dde);
+    color: white;
+
+    border-radius: 20px;
+}
+
+/* Valor numérico da temperatura */
+#temp_value {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 55px;
+}
+
+/* Descrição do clima (ex: céu limpo, nublado) */
+#temp_description {
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* Grid com informações adicionais */
+#other_infos {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+/* Card individual de informação */
+#other_infos .info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 4px 10px;
+    gap: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Título das informações (Temp máx, mín, etc.) */
+#other_infos .info h2 {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Ícones das informações */
+#other_infos .info i {
+    font-size: 20px;
+    width: 20%;
+    text-align: center;
+}
+
+/* Cores específicas para cada ícone */
+#temp_icon_max {
+    color: red;
+}
+
+#temp_icon_min {
+    color: blue;
+}
+
+#temp_icon_umidade {
+    color: #0ea5e9;
+}
+
+#temp_icon_vento {
+    color: #7c3aed;
+}
+
+/* Mensagens de alerta (erro, validação) */
+#alert {
+    margin-top: 10px;
+}
+
