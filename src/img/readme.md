@@ -83,7 +83,6 @@ Parâmetros utilizados:
 
 ## 📸 Demonstração
 
-![Preview do projeto](/weather/img/Captura%20de%20tela%20de%202025-12-17%2020-01-29.png)
 ![Preview do projeto](/weather/img/Captura%20de%20tela%20de%202025-12-17%2020-10-39.png)
 
 
