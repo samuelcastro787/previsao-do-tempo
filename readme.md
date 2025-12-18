@@ -83,15 +83,7 @@ Parâmetros utilizados:
 
 ## 📸 Demonstração
 
-![Preview do projeto](/weather/img/Captura%20de%20tela%20de%202025-12-17%2020-10-39.png)
-
-
----
-
-## 👨‍💻 Autor
-
-**Samuel Castro**
-Desenvolvedor Front-end
+[Preview](/img/preview2.png)
 
 ---
 
