@@ -35,16 +35,16 @@ async function buscar() {
         document.getElementById('city').innerHTML = `${tempo.name}, ${tempo.sys.country}`
         
         // Exibe a temperatura atual formatada
-        document.getElementById('temp_value').innerHTML = `${tempo.main.temp.toFixed(1).toString().replace('.', ',')} C°`
+        document.getElementById('temp_value').innerHTML = `${tempo.main.temp.toFixed(1).toString().replace('.', ',')} <sup>C°<sup>`
         
         // Exibe a descrição do clima (ex: nublado, ensolarado)
         document.getElementById('temp_description').innerHTML = `${tempo.weather[0].description}`
 
          // Exibe a temperatura máxima
-        document.getElementById('temp_max').innerHTML = `${tempo.main.temp_max.toFixed(1).toString().replace('.', ',')}`
+        document.getElementById('temp_max').innerHTML = `${tempo.main.temp_max.toFixed(1).toString().replace('.', ',')} <sup>C°<sup>`
 
         // Exibe a temperatura mínima
-        document.getElementById('temp_min').innerHTML = `${tempo.main.temp_min.toFixed(1).toString().replace('.', ',')}`
+        document.getElementById('temp_min').innerHTML = `${tempo.main.temp_min.toFixed(1).toString().replace('.', ',')} <sup>C°<sup>`
 
         // Define o ícone do clima com base no código retornado pela API
         document.getElementById('temp_icon').setAttribute('src', `https://openweathermap.org/img/wn/${tempo.weather[0].icon}@2x.png`)
